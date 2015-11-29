@@ -18,7 +18,7 @@ describe('simple bin help', function () {
   it('checks number of arguments', function () {
     var options = {
       minArguments: 10,
-      exit: false
+      noExit: true
     };
     var cliArguments = ['foo', 'bar', 'baz'];
     la(!simpleHelp(options, cliArguments));

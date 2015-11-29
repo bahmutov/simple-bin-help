@@ -16,7 +16,6 @@ function showHelp(options) {
   var pkgInfo;
   if (pkg) {
     pkgInfo = pkg.name + '@' + pkg.version + ' - ' + pkg.description;
-    pkgInfo += '\nis used incorrectly, check out instructions `manpm ' + pkg.name + '`';
   }
 
   if (pkgInfo) {
@@ -27,6 +26,9 @@ function showHelp(options) {
   }
   if (!pkgInfo && !helpMessage) {
     console.log('Incorrect CLI arguments');
+    if (pkg && pkg.name) {
+      console.log('Check out instructions for this module using `npm home ' + pkg.name + '`');
+    }
   }
 }
 
@@ -42,11 +44,10 @@ function simpleBinHelp(options, cliArguments) {
     options.n;
   if (noArguments(minArguments, cliArguments)) {
     showHelp(options);
-    if (options.exit) {
-      process.exit(0);
-    } else {
+    if (options.noExit) {
       return false;
     }
+    process.exit(0);
   }
 
   return true;

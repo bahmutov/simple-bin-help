@@ -28,6 +28,24 @@ require('simple-bin-help')({
 });
 ```
 
+## Api
+
+Single options object, with the following properties
+
+```js
+var options = {
+  noExit: true | false, // simple-bin-help by default calls process.exit
+  help: 'help string',  // to display if invalid arguments
+  minArguments: n,      // min number of arguments to check
+  pkg: packageObject,   // package object or path for better message
+  packagePath: 'path/to/package.json'
+};
+require('simple-bin-help')(options);
+```
+
+If `noExit` is true, the call simply shows the error message if number of arguments is
+invalid and returns a boolean result.
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
