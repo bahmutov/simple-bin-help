@@ -4,7 +4,7 @@
   "description": "Simple help and sanity checks for Node CLI bin scripts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha spec"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,10 @@
   "bugs": {
     "url": "https://github.com/bahmutov/simple-bin-help/issues"
   },
-  "homepage": "https://github.com/bahmutov/simple-bin-help#readme"
+  "homepage": "https://github.com/bahmutov/simple-bin-help#readme",
+  "devDependencies": {
+    "check-more-types": "2.2.0",
+    "lazy-ass": "1.1.0",
+    "mocha": "2.3.4"
+  }
 }
