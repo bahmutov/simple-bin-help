@@ -1,0 +1,29 @@
+{
+  "name": "simple-bin-help",
+  "version": "1.0.0",
+  "description": "Simple help and sanity checks for Node CLI bin scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/simple-bin-help.git"
+  },
+  "keywords": [
+    "npm",
+    "cli",
+    "bin",
+    "utility",
+    "help",
+    "helper",
+    "update",
+    "start"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/simple-bin-help/issues"
+  },
+  "homepage": "https://github.com/bahmutov/simple-bin-help#readme"
+}
