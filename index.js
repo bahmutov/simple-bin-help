@@ -15,7 +15,7 @@ function showHelp(options) {
 
   var pkgInfo;
   if (pkg) {
-    pkgInfo = pkg.name + '@' + pkg.version + ' - ' + pkg.description;
+    pkgInfo = pkg.name + '@' + pkg.version + '\n - ' + pkg.description;
   }
 
   if (pkgInfo) {
