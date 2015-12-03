@@ -4,13 +4,13 @@
   "main": "index.js",
   "version": "0.0.0-semantic-release",
   "scripts": {
-    "test": "mocha spec",
+    "test": "mocha --harmony spec",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "lint": "standard *.js spec/*.js examples/*.js",
-    "basic": "node examples/basic.js"
+    "basic": "node --harmony examples/basic.js"
   },
   "files": [
     "index.js"
