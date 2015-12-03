@@ -1,11 +1,13 @@
+'use strict'
+
+const updateNotifier = require('update-notifier')
+
 function noArguments (minLength, args) {
   console.assert(Array.isArray(args), 'missing arguments')
   return args.length < minLength
 }
 
-function showHelp (options) {
-  var helpMessage = options.help || options.helpMessage
-
+function getPackage (options) {
   var pkg
 
   if (options.package) {
@@ -13,6 +15,14 @@ function showHelp (options) {
   } else if (options.packagePath) {
     pkg = require(options.packagePath)
   }
+
+  return pkg
+}
+
+function showHelp (options) {
+  var helpMessage = options.help || options.helpMessage
+
+  var pkg = getPackage(options)
 
   var pkgInfo
   if (pkg) {
@@ -38,6 +48,11 @@ function simpleBinHelp (options, cliArguments) {
 
   if (!cliArguments) {
     cliArguments = process.argv
+  }
+
+  var pkg = getPackage(options)
+  if (pkg) {
+    updateNotifier({ pkg: pkg }).notify()
   }
 
   var minArguments = options.minArguments ||

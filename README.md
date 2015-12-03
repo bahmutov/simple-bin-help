@@ -48,6 +48,10 @@ require('simple-bin-help')(options);
 If `noExit` is true, the call simply shows the error message if number of arguments is
 invalid and returns a boolean result.
 
+## Bonus features
+
+Includes and calls the [update-notifier]() module by default.
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
