@@ -39,7 +39,8 @@ var options = {
   help: 'help string',  // to display if invalid arguments
   minArguments: n,      // min number of arguments to check
   pkg: packageObject,   // package object or path for better message
-  packagePath: 'path/to/package.json'
+  packagePath: 'path/to/package.json',
+  onFail: fn            // user-supplied function to be called after help has been shown
 };
 require('simple-bin-help')(options);
 ```

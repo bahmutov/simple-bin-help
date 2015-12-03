@@ -24,4 +24,19 @@ describe('simple bin help', function () {
     var cliArguments = ['foo', 'bar', 'baz']
     la(!simpleHelp(options, cliArguments))
   })
+
+  it('calls provided method on fail', function () {
+    var called
+    function onFail () {
+      called = true
+    }
+    var options = {
+      minArguments: 1,
+      noExit: true,
+      onFail: onFail
+    }
+    var cliArguments = []
+    la(!simpleHelp(options, cliArguments), 'not enough arguments')
+    la(called, 'onFail called')
+  })
 })

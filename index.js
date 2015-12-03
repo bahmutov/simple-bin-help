@@ -45,6 +45,11 @@ function simpleBinHelp (options, cliArguments) {
     options.n
   if (noArguments(minArguments, cliArguments)) {
     showHelp(options)
+
+    if (typeof options.onFail === 'function') {
+      options.onFail()
+    }
+
     if (options.noExit) {
       return false
     }
