@@ -38,7 +38,7 @@ var options = {
   noExit: true | false, // simple-bin-help by default calls process.exit
   help: 'help string',  // to display if invalid arguments
   minArguments: n,      // min number of arguments to check
-  pkg: packageObject,   // package object or path for better message
+  pkg: packageObject,   // package (or pkg) object or path for better message
   packagePath: 'path/to/package.json',
   onFail: fn            // user-supplied function to be called after help has been shown
 };
@@ -48,9 +48,13 @@ require('simple-bin-help')(options);
 If `noExit` is true, the call simply shows the error message if number of arguments is
 invalid and returns a boolean result.
 
+For more examples, see [examples/basic.js](examples/basic.js) file that calls the method
+with several permutations.
+
 ## Bonus features
 
-Includes and calls the [update-notifier]() module by default.
+* Includes and calls the [update-notifier]() module by default.
+* If passed `-h` or `--help` option, shows the help message.
 
 ### Small print
 

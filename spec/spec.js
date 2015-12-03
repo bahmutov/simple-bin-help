@@ -39,4 +39,20 @@ describe('simple bin help', function () {
     la(!simpleHelp(options, cliArguments), 'not enough arguments')
     la(called, 'onFail called')
   })
+
+  it('can show help with -h', function () {
+    var options = {
+      noExit: true
+    }
+    var cliArguments = ['-h']
+    la(simpleHelp(options, cliArguments))
+  })
+
+  it('can show help with --help', function () {
+    var options = {
+      noExit: true
+    }
+    var cliArguments = ['--help']
+    la(simpleHelp(options, cliArguments))
+  })
 })

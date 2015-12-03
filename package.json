@@ -9,7 +9,8 @@
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
-    "lint": "standard *.js spec/*.js"
+    "lint": "standard *.js spec/*.js examples/*.js",
+    "basic": "node examples/basic.js"
   },
   "files": [
     "index.js"
@@ -48,7 +49,8 @@
       "commit-msg": "validate-commit-msg",
       "pre-commit": [
         "npm run lint",
-        "npm test"
+        "npm test",
+        "npm run basic"
       ],
       "pre-push": [
         "npm run size"

@@ -2,17 +2,24 @@
 
 const updateNotifier = require('update-notifier')
 
+function isHelp (arg) {
+  return arg === '-h' ||
+    arg === '--help'
+}
+
+function hasHelpArgument (args) {
+  return args.some(isHelp)
+}
+
 function noArguments (minLength, args) {
   console.assert(Array.isArray(args), 'missing arguments')
   return args.length < minLength
 }
 
 function getPackage (options) {
-  var pkg
+  var pkg = options.pkg || options.package
 
-  if (options.package) {
-    pkg = options.package
-  } else if (options.packagePath) {
+  if (!pkg && options.packagePath) {
     pkg = require(options.packagePath)
   }
 
@@ -26,7 +33,13 @@ function showHelp (options) {
 
   var pkgInfo
   if (pkg) {
-    pkgInfo = pkg.name + '@' + pkg.version + '\n - ' + pkg.description
+    pkgInfo = pkg.name ? pkg.name : ''
+    if (pkg.version) {
+      pkgInfo += '@' + pkg.version
+    }
+    if (pkg.description) {
+      pkgInfo += '\n - ' + pkg.description
+    }
   }
 
   if (pkgInfo) {
@@ -43,6 +56,13 @@ function showHelp (options) {
   }
 }
 
+function finish (options) {
+  if (options.noExit) {
+    return false
+  }
+  process.exit(0)
+}
+
 function simpleBinHelp (options, cliArguments) {
   console.assert(options, 'missing options')
 
@@ -50,14 +70,21 @@ function simpleBinHelp (options, cliArguments) {
     cliArguments = process.argv
   }
 
+  if (hasHelpArgument(cliArguments)) {
+    showHelp(options)
+    finish(options)
+    return true
+  }
+
   var pkg = getPackage(options)
-  if (pkg) {
+  if (pkg && pkg.name && pkg.version) {
     updateNotifier({ pkg: pkg }).notify()
   }
 
   var minArguments = options.minArguments ||
     options.min ||
     options.n
+
   if (noArguments(minArguments, cliArguments)) {
     showHelp(options)
 
@@ -65,10 +92,7 @@ function simpleBinHelp (options, cliArguments) {
       options.onFail()
     }
 
-    if (options.noExit) {
-      return false
-    }
-    process.exit(0)
+    return finish(options)
   }
 
   return true
