@@ -8,9 +8,12 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",
-    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
+    "lint": "standard *.js spec/*.js"
   },
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/bahmutov/simple-bin-help.git"
@@ -37,12 +40,14 @@
     "lazy-ass": "1.1.0",
     "mocha": "2.3.4",
     "pre-git": "1.4.0",
-    "semantic-release": "4.3.5"
+    "semantic-release": "4.3.5",
+    "standard": "5.4.1"
   },
   "config": {
     "pre-git": {
       "commit-msg": "validate-commit-msg",
       "pre-commit": [
+        "npm run lint",
         "npm test"
       ],
       "pre-push": [

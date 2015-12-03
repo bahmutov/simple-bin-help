@@ -8,6 +8,7 @@
 [![dependencies][simple-bin-help-dependencies-image] ][simple-bin-help-dependencies-url]
 [![devdependencies][simple-bin-help-devdependencies-image] ][simple-bin-help-devdependencies-url]
 [![semantic-release][semantic-image] ][semantic-url]
+[![standard](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Install
 
