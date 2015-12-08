@@ -39,7 +39,7 @@ function showHelp (options) {
       pkgInfo += '@' + pkg.version
     }
     if (pkg.description) {
-      pkgInfo += '\n' + wrap(pkg.description, { width: 60, indent: ' - ' })
+      pkgInfo += '\n' + wrap(pkg.description, { width: 60, indent: ' > ' })
     }
   }
 
