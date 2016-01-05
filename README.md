@@ -51,6 +51,16 @@ invalid and returns a boolean result.
 For more examples, see [examples/basic.js](examples/basic.js) file that calls the method
 with several permutations.
 
+## Passing arguments
+
+You might do your own argument pre-processing before calling this module. In this
+case pass the list of arguments as the second argument
+
+```js
+var args = process.argv.filter(myFilter);
+require('simple-bin-help')(options, args);
+```
+
 ## Bonus features
 
 * Includes and calls the [update-notifier]() module by default.
