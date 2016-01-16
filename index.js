@@ -1,11 +1,10 @@
 'use strict'
 
-const updateNotifier = require('update-notifier')
-const wrap = require('word-wrap')
+var updateNotifier = require('update-notifier')
+var wrap = require('word-wrap')
 
 function isHelp (arg) {
-  return arg === '-h' ||
-    arg === '--help'
+  return arg === '-h' || arg === '--help'
 }
 
 function hasHelpArgument (args) {
