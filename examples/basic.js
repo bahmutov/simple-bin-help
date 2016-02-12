@@ -1,4 +1,6 @@
-const simpleBinHelp = require('..')
+'use strict'
+
+var simpleBinHelp = require('simple-bin-help')
 
 var options = {
   noExit: true,
@@ -21,11 +23,12 @@ options = {
 console.log('min arguments 3, calling with package')
 simpleBinHelp(options)
 
+var join = require('path').join
 options = {
   noExit: true,
   help: 'basic example, path to real package.json',
   minArguments: 3,
-  packagePath: __dirname + '/../package.json',
+  packagePath: join(__dirname, '..', 'package.json'),
   onFail: function () {
     console.log('fail callback, show extra info')
   }
