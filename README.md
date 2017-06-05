@@ -61,8 +61,15 @@ require('simple-bin-help')(options, args);
 
 ## Bonus features
 
-* Includes and calls the [update-notifier]() module by default.
+* Includes and calls the [update-notifier][update-notifier] module by default.
 * If passed `-h` or `--help` option, shows the help message.
+* If passed `-v` or `--version` option, shows the package version.
+
+[update-notifier]: https://github.com/yeoman/update-notifier#readme
+
+## Debug
+
+Run code with `DEBUG=simple-bin-help ...` environment variable
 
 ### Small print
 
