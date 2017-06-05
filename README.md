@@ -5,8 +5,6 @@
 [![NPM][simple-bin-help-icon] ][simple-bin-help-url]
 
 [![Build status][simple-bin-help-ci-image] ][simple-bin-help-ci-url]
-[![dependencies][simple-bin-help-dependencies-image] ][simple-bin-help-dependencies-url]
-[![devdependencies][simple-bin-help-devdependencies-image] ][simple-bin-help-devdependencies-url]
 [![semantic-release][semantic-image] ][semantic-url]
 [![standard](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
@@ -71,8 +69,8 @@ require('simple-bin-help')(options, args);
 Author: Gleb Bahmutov &copy; 2015
 
 * [@bahmutov](https://twitter.com/bahmutov)
-* [glebbahmutov.com](http://glebbahmutov.com)
-* [blog](http://glebbahmutov.com/blog/)
+* [glebbahmutov.com](https://glebbahmutov.com)
+* [blog](https://glebbahmutov.com/blog/)
 
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
@@ -106,13 +104,9 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[simple-bin-help-icon]: https://nodei.co/npm/simple-bin-help.png?downloads=true
+[simple-bin-help-icon]: https://nodei.co/npm/simple-bin-help.svg?downloads=true
 [simple-bin-help-url]: https://npmjs.org/package/simple-bin-help
-[simple-bin-help-ci-image]: https://travis-ci.org/bahmutov/simple-bin-help.png?branch=master
+[simple-bin-help-ci-image]: https://travis-ci.org/bahmutov/simple-bin-help.svg?branch=master
 [simple-bin-help-ci-url]: https://travis-ci.org/bahmutov/simple-bin-help
-[simple-bin-help-dependencies-image]: https://david-dm.org/bahmutov/simple-bin-help.png
-[simple-bin-help-dependencies-url]: https://david-dm.org/bahmutov/simple-bin-help
-[simple-bin-help-devdependencies-image]: https://david-dm.org/bahmutov/simple-bin-help/dev-status.png
-[simple-bin-help-devdependencies-url]: https://david-dm.org/bahmutov/simple-bin-help#info=devDependencies
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
