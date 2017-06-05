@@ -74,7 +74,7 @@ function finish (options) {
   process.exit(0)
 }
 
-function showVersion(pkg) {
+function showVersion (pkg) {
   console.log(pkg.name, pkg.version)
 }
 
