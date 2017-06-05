@@ -2,7 +2,7 @@
   "name": "simple-bin-help",
   "description": "Simple help and sanity checks for Node CLI bin scripts",
   "main": "index.js",
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.0-development",
   "scripts": {
     "test": "mocha --harmony spec",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
@@ -41,7 +41,7 @@
     "lazy-ass": "1.6.0",
     "mocha": "3.4.2",
     "pre-git": "3.15.0",
-    "semantic-release": "6.3.6",
+    "semantic-release": "^6.3.6",
     "standard": "10.0.2"
   },
   "config": {
