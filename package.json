@@ -39,10 +39,10 @@
     "check-more-types": "2.24.0",
     "git-issues": "1.3.1",
     "lazy-ass": "1.6.0",
-    "mocha": "3.4.2",
-    "pre-git": "3.15.0",
+    "mocha": "5.2.0",
+    "pre-git": "3.17.1",
     "semantic-release": "^6.3.6",
-    "standard": "10.0.2"
+    "standard": "11.0.1"
   },
   "config": {
     "pre-git": {
@@ -60,8 +60,11 @@
     }
   },
   "dependencies": {
-    "debug": "2.6.8",
-    "update-notifier": "2.1.0",
+    "debug": "3.1.0",
+    "update-notifier": "2.5.0",
     "word-wrap": "1.2.3"
+  },
+  "release": {
+    "analyzeCommits": "simple-commit-message"
   }
 }
