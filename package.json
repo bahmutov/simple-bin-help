@@ -62,7 +62,7 @@
     }
   },
   "dependencies": {
-    "debug": "3.1.0",
+    "debug": "3.2.2",
     "update-notifier": "2.5.0",
     "word-wrap": "1.2.3"
   },
