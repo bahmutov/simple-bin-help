@@ -107,7 +107,7 @@ function simpleBinHelp (options, cliArguments) {
   }
 
   if (pkg && pkg.name && pkg.version) {
-    updateNotifier({ pkg: pkg }).notify()
+    updateNotifier({ pkg }).notify()
   }
 
   var minArguments = options.minArguments ||
