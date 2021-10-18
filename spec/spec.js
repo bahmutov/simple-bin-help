@@ -1,5 +1,5 @@
-var la = require('lazy-ass')
-var check = require('check-more-types')
+const {lazyAss: la} = require('lazy-ass')
+const check = require('check-more-types')
 
 /* global describe, it */
 describe('simple bin help', function () {
