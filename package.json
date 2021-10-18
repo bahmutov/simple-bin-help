@@ -8,10 +8,9 @@
     "semantic-release": "semantic-release",
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",
-    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
+    "size": "npm pack --dry",
     "lint": "standard --fix *.js spec/*.js examples/*.js",
-    "basic": "NODE_PATH=.. node examples/basic.js",
-    "travis-deploy-once": "travis-deploy-once"
+    "basic": "NODE_PATH=.. node examples/basic.js"
   },
   "files": [
     "index.js"
@@ -41,40 +40,12 @@
     "git-issues": "1.3.1",
     "lazy-ass": "1.6.0",
     "mocha": "5.2.0",
-    "pre-git": "3.17.1",
     "semantic-release": "15.14.0",
-    "standard": "11.0.1",
-    "travis-deploy-once": "5.0.11"
-  },
-  "config": {
-    "pre-git": {
-      "commit-msg": "simple",
-      "pre-commit": [
-        "npm run lint",
-        "npm test",
-        "npm run basic"
-      ],
-      "pre-push": [
-        "npm run size"
-      ],
-      "post-commit": [],
-      "post-merge": []
-    }
+    "standard": "11.0.1"
   },
   "dependencies": {
     "debug": "3.2.7",
     "update-notifier": "2.5.0",
     "word-wrap": "1.2.3"
-  },
-  "release": {
-    "analyzeCommits": {
-      "preset": "angular",
-      "releaseRules": [
-        {
-          "type": "break",
-          "release": "major"
-        }
-      ]
-    }
   }
 }
