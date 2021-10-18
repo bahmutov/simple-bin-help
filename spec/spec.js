@@ -33,7 +33,7 @@ describe('simple bin help', function () {
     var options = {
       minArguments: 1,
       noExit: true,
-      onFail: onFail
+      onFail
     }
     var cliArguments = []
     la(!simpleHelp(options, cliArguments), 'not enough arguments')
