@@ -41,7 +41,7 @@
     "lazy-ass": "2.0.3",
     "mocha": "5.2.0",
     "semantic-release": "18.0.0",
-    "standard": "11.0.1"
+    "standard": "16.0.4"
   },
   "dependencies": {
     "debug": "3.2.7",
