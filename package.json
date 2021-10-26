@@ -9,6 +9,7 @@
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",
     "size": "npm pack --dry",
+    "lint-ci": "standard *.js spec/*.js examples/*.js",
     "lint": "standard --fix *.js spec/*.js examples/*.js",
     "basic": "NODE_PATH=.. node examples/basic.js"
   },

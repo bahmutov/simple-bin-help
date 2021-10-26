@@ -11,6 +11,7 @@ jobs:
       # https://github.com/bahmutov/npm-install
       - uses: bahmutov/npm-install@v1
 
+      - run: npm run lint-ci
       - run: npm test
 
       - name: Semantic Release 🚀
