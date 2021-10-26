@@ -1,8 +1,8 @@
 'use strict'
 
-var updateNotifier = require('update-notifier')
-var wrap = require('word-wrap')
-var debug = require('debug')('simple-bin-help')
+const updateNotifier = require('update-notifier')
+const wrap = require('word-wrap')
+const debug = require('debug')('simple-bin-help')
 
 function isHelp (arg) {
   return arg === '-h' || arg === '--help'
@@ -26,7 +26,7 @@ function noArguments (minLength, args) {
 }
 
 function getPackage (options) {
-  var pkg = options.pkg || options.package
+  let pkg = options.pkg || options.package
 
   if (!pkg && options.packagePath) {
     pkg = require(options.packagePath)
@@ -36,12 +36,12 @@ function getPackage (options) {
 }
 
 function showHelp (options) {
-  var helpMessage = options.help || options.helpMessage
+  const helpMessage = options.help || options.helpMessage
   debug('showHelp options %j', options)
 
-  var pkg = getPackage(options)
+  const pkg = getPackage(options)
 
-  var pkgInfo
+  let pkgInfo
   if (pkg) {
     pkgInfo = pkg.name ? pkg.name : ''
     if (pkg.version) {
@@ -93,7 +93,7 @@ function simpleBinHelp (options, cliArguments) {
     return true
   }
 
-  var pkg = getPackage(options)
+  const pkg = getPackage(options)
   if (pkg) {
     debug('found package %s %s', pkg.name, pkg.version)
   } else {
@@ -110,7 +110,7 @@ function simpleBinHelp (options, cliArguments) {
     updateNotifier({ pkg }).notify()
   }
 
-  var minArguments = options.minArguments ||
+  const minArguments = options.minArguments ||
     options.min ||
     options.n
 

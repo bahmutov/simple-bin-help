@@ -1,58 +1,58 @@
-const {lazyAss: la} = require('lazy-ass')
+const { lazyAss: la } = require('lazy-ass')
 const check = require('check-more-types')
 
 /* global describe, it */
 describe('simple bin help', function () {
-  var simpleHelp = require('..')
+  const simpleHelp = require('..')
   it('is a function', function () {
     la(check.fn(simpleHelp))
   })
 
   it('is successful', function () {
-    var options = {
+    const options = {
       minArguments: 2
     }
-    var cliArguments = ['foo', 'bar', 'baz']
+    const cliArguments = ['foo', 'bar', 'baz']
     la(simpleHelp(options, cliArguments))
   })
 
   it('checks number of arguments', function () {
-    var options = {
+    const options = {
       minArguments: 10,
       noExit: true
     }
-    var cliArguments = ['foo', 'bar', 'baz']
+    const cliArguments = ['foo', 'bar', 'baz']
     la(!simpleHelp(options, cliArguments))
   })
 
   it('calls provided method on fail', function () {
-    var called
+    let called
     function onFail () {
       called = true
     }
-    var options = {
+    const options = {
       minArguments: 1,
       noExit: true,
       onFail
     }
-    var cliArguments = []
+    const cliArguments = []
     la(!simpleHelp(options, cliArguments), 'not enough arguments')
     la(called, 'onFail called')
   })
 
   it('can show help with -h', function () {
-    var options = {
+    const options = {
       noExit: true
     }
-    var cliArguments = ['-h']
+    const cliArguments = ['-h']
     la(simpleHelp(options, cliArguments))
   })
 
   it('can show help with --help', function () {
-    var options = {
+    const options = {
       noExit: true
     }
-    var cliArguments = ['--help']
+    const cliArguments = ['--help']
     la(simpleHelp(options, cliArguments))
   })
 })
