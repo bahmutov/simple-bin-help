@@ -9,6 +9,7 @@
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",
     "size": "npm pack --dry",
+    "lint-ci": "standard *.js spec/*.js examples/*.js",
     "lint": "standard --fix *.js spec/*.js examples/*.js",
     "basic": "NODE_PATH=.. node examples/basic.js"
   },
@@ -41,7 +42,7 @@
     "lazy-ass": "2.0.3",
     "mocha": "5.2.0",
     "semantic-release": "18.0.0",
-    "standard": "11.0.1"
+    "standard": "16.0.4"
   },
   "dependencies": {
     "debug": "3.2.7",

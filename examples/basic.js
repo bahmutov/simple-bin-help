@@ -1,8 +1,8 @@
 'use strict'
 
-var simpleBinHelp = require('simple-bin-help')
+const simpleBinHelp = require('simple-bin-help')
 
-var options = {
+let options = {
   noExit: true,
   help: 'basic example help',
   minArguments: 3,
@@ -23,7 +23,7 @@ options = {
 console.log('min arguments 3, calling with package')
 simpleBinHelp(options)
 
-var join = require('path').join
+const join = require('path').join
 options = {
   noExit: true,
   help: 'basic example, path to real package.json',
