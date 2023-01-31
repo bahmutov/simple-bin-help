@@ -45,7 +45,7 @@
     "standard": "16.0.4"
   },
   "dependencies": {
-    "debug": "3.2.7",
+    "debug": "4.3.4",
     "update-notifier": "5.1.0",
     "word-wrap": "1.2.3"
   }
