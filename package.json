@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "debug": "4.3.4",
-    "update-notifier": "5.1.0",
+    "update-notifier": "6.0.2",
     "word-wrap": "1.2.3"
   }
 }
