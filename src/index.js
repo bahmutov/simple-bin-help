@@ -1,8 +1,9 @@
 'use strict'
 
-const updateNotifier = require('update-notifier')
+import updateNotifier from 'update-notifier'
 const wrap = require('word-wrap')
 const debug = require('debug')('simple-bin-help')
+const path = require('path')
 
 function isHelp (arg) {
   return arg === '-h' || arg === '--help'
@@ -131,7 +132,7 @@ module.exports = simpleBinHelp
 
 if (!module.parent) {
   simpleBinHelp({
-    packagePath: './package.json',
+    packagePath: path.join(process.cwd(), 'package.json'),
     help: 'test help message'
   })
 }

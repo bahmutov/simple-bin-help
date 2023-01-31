@@ -7,8 +7,8 @@
     "test": "mocha spec",
     "semantic-release": "semantic-release",
     "size": "npm pack --dry",
-    "lint-ci": "standard src/*.js spec/*.js examples/*.js",
-    "lint": "standard --fix src/*.js spec/*.js examples/*.js",
+    "lint-ci": "standard src/index.js spec/*.js examples/*.js",
+    "lint": "standard --fix src/index.js spec/*.js examples/*.js",
     "basic": "NODE_PATH=.. node examples/basic.js",
     "build": "esbuild src/index.js --bundle --outfile=dist/index.js --platform=node --target=node14 --format=cjs --inject:./src/import-meta-url.js --define:import.meta.url=import_meta_url"
   },
@@ -46,7 +46,7 @@
     "semantic-release": "19.0.5",
     "standard": "17.0.0",
     "debug": "4.3.4",
-    "update-notifier": "5.1.0",
+    "update-notifier": "6.0.2",
     "word-wrap": "1.2.3"
   },
   "dependencies": {
