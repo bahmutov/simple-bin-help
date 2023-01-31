@@ -11,7 +11,8 @@ jobs:
       # https://github.com/bahmutov/npm-install
       - uses: bahmutov/npm-install@v1
 
-      - run: npm audit report || true
+      - name: Check dependencies
+        run: npm audit report
       - run: npm run lint-ci
       - run: npm test
 
