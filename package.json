@@ -44,7 +44,7 @@
     "lazy-ass": "2.0.3",
     "mocha": "10.2.0",
     "semantic-release": "20.1.0",
-    "standard": "17.0.0",
+    "standard": "17.1.0",
     "debug": "4.3.4",
     "update-notifier": "6.0.2",
     "word-wrap": "1.2.3"
